@@ -1,0 +1,7 @@
+Esse código, ele não é lá muito coeso, está certo?
+Como que eu sei disso?
+A minha primeira dica é o seguinte, eu sempre paro e penso: “Puxa, será que essa classe vai parar de crescer?
+Porque veja só: se a classe é coesa, ou seja, ela tem uma única responsabilidade,
+ela cuida de apenas uma única parte do meu sistema, ela representa uma única entidade.
+Se essa classe é coesa, ela tem que parar de crescer um dia.
+Porque as responsabilidades de uma entidade um dia param de aparecer.
