@@ -1,0 +1,27 @@
+No mundo OO, tem até essa Lei de Demeter, que é mais ou menos famosa, e ela diz mais ou menos isso:
+Olha, evita ao máximo a ideia de você fazer essas invocações em cadeia.
+A.getB.getC etc., invoca um método qualquer, como é o exemplo desse código.
+Por quê? O que eu estou ganhando quando eu sigo a Lei de Demeter na maioria dos casos?
+
+Eu estou ganhando encapsulamento. Estou escondendo meu código. E o que eu ganhei com encapsulamento?
+Diminuo propagação de mudanças.
+
+
+Eu quero saber se isso está bem encapsulado. Eu faço pra mim duas perguntas, a primeira é:
+O que esse método faz? E como que eu sei isso?
+Eu sei o que o método faz pelo nome dele, calcula o valor do imposto.
+É um nome bem semântico, deixa claro pra mim que ele está calculando o valor do imposto.
+Ótimo, consegui responder essa pergunta, então está legal.
+
+A próxima pergunta é: Como que ele faz isso? Ou seja, como que ele calcula o valor do imposto?
+Se eu olhar só pra esse código, eu não sei responder.
+Eu não sei dizer qual que é a regra que ele está usando por debaixo dos panos.
+Eu não sei qual é a implementação do calculaValorImposto(), e isso, na verdade, é uma coisa boa.
+Eu nunca posso saber como que um método faz alguma coisa.
+Eu tenho que deixar isso escondido, eu tenho que deixar isso encapsulado nele.
+
+Se o método esconde bem, se ele esconde como ele faz o que ele deixa bem claro pelo nome,
+se ele esconde esse “como” ele está fazendo, o que eu ganho?
+Eu ganho que eu posso trocar essa implementação sem nenhum problema.
+Se eu entrar no código calculaValorImposto() e mudar a regra, as classes clientes não serão afetadas,
+todas elas continuarão a funcionar com a regra nova.

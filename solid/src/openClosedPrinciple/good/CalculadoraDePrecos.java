@@ -1,9 +1,6 @@
 package openClosedPrinciple.good;
 
 import openClosedPrinciple.bad.Compra;
-import openClosedPrinciple.bad.Frete;
-import openClosedPrinciple.bad.TabelaDePrecoDiferenciada;
-import openClosedPrinciple.bad.TabelaDePrecoPadrao;
 
 public class CalculadoraDePrecos {
 

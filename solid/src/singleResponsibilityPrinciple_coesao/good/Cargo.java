@@ -2,17 +2,17 @@ package singleResponsibilityPrinciple_coesao.good;
 
 public enum Cargo {
 
-	DESENVOLVEDOR(new DezOuVintePorcento()),
-	DBA(new QuinzeOuVintePorcento()),
-	TESTER(new QuinzeOuVintePorcento());
-	
-	private RegraDeCalculo regra;
+    DESENVOLVEDOR(new DezOuVintePorcento()),
+    DBA(new QuinzeOuVintePorcento()),
+    TESTER(new QuinzeOuVintePorcento());
 
-	Cargo(RegraDeCalculo regra){
-		this.regra = regra;
-	}
+    private RegraDeCalculo regra;
 
-	public RegraDeCalculo getRegra() {
-		return regra;
-	}
+    Cargo(RegraDeCalculo regra) {
+        this.regra = regra;
+    }
+
+    public RegraDeCalculo getRegra() {
+        return regra;
+    }
 }

@@ -1,39 +1,35 @@
 package singleResponsibilityPrinciple_coesao.bad;
 
-import static singleResponsibilityPrinciple_coesao.bad.Cargo.DBA;
-import static singleResponsibilityPrinciple_coesao.bad.Cargo.DESENVOLVEDOR;
-import static singleResponsibilityPrinciple_coesao.bad.Cargo.TESTER;
+import static singleResponsibilityPrinciple_coesao.bad.Cargo.*;
 
 public class CalculadoraDeSalario {
 
-	public double calcula(Funcionario funcionario) {
-		if(DESENVOLVEDOR.equals(funcionario.getCargo())) {
-			return dezOuVintePorcento(funcionario);
-		}
+    public double calcula(Funcionario funcionario) {
+        if (DESENVOLVEDOR.equals(funcionario.getCargo())) {
+            return dezOuVintePorcento(funcionario);
+        }
 
-		if(DBA.equals(funcionario.getCargo()) || TESTER.equals(funcionario.getCargo())) {
-			return quinzeOuVinteCincoPorcento(funcionario);
-		}
+        if (DBA.equals(funcionario.getCargo()) || TESTER.equals(funcionario.getCargo())) {
+            return quinzeOuVinteCincoPorcento(funcionario);
+        }
 
-		throw new RuntimeException("funcionario invalido");
-	}
+        throw new RuntimeException("funcionario invalido");
+    }
 
-	private double dezOuVintePorcento(Funcionario funcionario) {
-		if(funcionario.getSalarioBase() > 3000.0) {
-			return funcionario.getSalarioBase() * 0.8;
-		}
-		else {
-			return funcionario.getSalarioBase() * 0.9;
-		}
-	}
+    private double dezOuVintePorcento(Funcionario funcionario) {
+        if (funcionario.getSalarioBase() > 3000.0) {
+            return funcionario.getSalarioBase() * 0.8;
+        } else {
+            return funcionario.getSalarioBase() * 0.9;
+        }
+    }
 
-	private double quinzeOuVinteCincoPorcento(Funcionario funcionario) {
-		if(funcionario.getSalarioBase() > 2000.0) {
-			return funcionario.getSalarioBase() * 0.75;
-		}
-		else {
-			return funcionario.getSalarioBase() * 0.85;
-		}
-	}
+    private double quinzeOuVinteCincoPorcento(Funcionario funcionario) {
+        if (funcionario.getSalarioBase() > 2000.0) {
+            return funcionario.getSalarioBase() * 0.75;
+        } else {
+            return funcionario.getSalarioBase() * 0.85;
+        }
+    }
 
 }

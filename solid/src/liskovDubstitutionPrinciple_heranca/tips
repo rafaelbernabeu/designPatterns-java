@@ -1,0 +1,54 @@
+Princípio de Substituição de Liskov.
+
+Resumo:
+Princípio de Liskov, toda classe filho tem que pensar nas pré-condições e pós-condições do pai, e ela nunca pode quebrar.
+Na pré-condição, ela nunca pode apertar.
+E na pós-condição, ela nunca pode afrouxar.
+Se não, as referências que apontam pra classe pai, quando receberem uma classe filho,
+não vão funcionar da maneira esperada.
+
+Qual é a ideia? A pesquisadora, na época – e esse artigo é antigo, é de por volta de 85, 86, 87 – percebeu que,
+pra você usar herança, você tem que pensar muito bem nas pré-condições da sua classe e nas pós-condições da sua classe.
+Se você pensar, todo método, quando recebe parâmetros, você tem pré-condições:
+“Ah, o inteiro que eu estou recebendo no método Saldo, no método X, no método fazUmDepósito, sei lá o quê,
+esse valor pode ser qualquer coisa que seja positiva, tem que ser maior que 0. No deposita, a mesma coisa.
+O double que eu recebo tem que ser maior que ).
+O retorno do método, não sei, getSaldo, é sempre um valor positivo, nunca é menor que 0, e getSaldo nunca
+retorna uma exception.
+
+Então, todo método tem lá as suas pré-condições e as suas pós-condições.
+Como que ela vai receber os dados de entrada, quais são as constraints, as restrições dos dados de entrada,
+e quais são as restrições do dado que ela gera como uma saída.
+
+Esse exemplo aqui do retângulo e do quadrado deixa bem claro isso, que as pré-condições de um e de outro são diferentes.
+Veja só, no retângulo, os lados não têm pré-condições, eles podem ser quaisquer números, inclusive diferentes.
+No quadrado, a pré-condição é diferente: os dois lados têm que ser iguais.
+E ela mostra – o Princípio de Liskov mostra – que, quando você tem uma classe filho, a classe filho nunca pode
+apertar as pré-condições. Você nunca pode criar uma pré-condição que seja mais restrita do que da classe pai.
+
+A classe filho só pode afrouxar a pré-condição.
+Pensa no caso onde eu tenho a classe pai, e a classe pai tem um método que pode receber inteiros de 1 a 100.
+Aí a classe filho muda isso, ela só deixa receber inteiros de 1 a 50. Veja só que 1 a 50 é mais restritivo do que 1 a 100.
+Eu apertei a pré-condição. Isso pode complicar as classes clientes, porque as classes clientes sabem que a
+classe pai pode receber de 1 a 100. Então elas vão passar de 1 a 100 sem pensar muito.
+
+Só que, se a classe filho apertou essa restrição, quer dizer que a classe filho vai ter um comportamento que é inesperado.
+
+Com a pós-condição, é a mesma coisa. A classe filho, ela nunca pode afrouxar a pós-condição – o contrário da pré.
+Consegue ver? A pós-condição, ela nunca pode afrouxar. Porque, pensa o seguinte, eu tenho um método que devolve um inteiro.
+E esse inteiro é de 1 a 100. Aí a classe filho sobrescreve o método, e passa a retornar de 1 a 200. Isso pode quebrar
+as classes clientes. Porque imagina só, o cliente está esperando um retorno de 1 a 100, e ele trata isso, que é o que
+ele espera. E a classe filho vem, e pode devolver mais valores.
+Ela devolve um 150, que a classe cliente não estava esperando. O código não vai funcionar de maneira ideal.
+
+Então, veja só que, para usar herança de maneira decente, eu tenho que pensar muito nas pré-condições e
+muito nas pós-condições. Eu nunca posso apertar uma pré-condição. E eu nunca posso afrouxar uma pós-condição.
+Veja que isso é bastante complicado, bem difícil de analisar na hora que você está desenvolvendo.
+Usar herança de maneira decente, criando classes filhas, que nunca vão quebrar quando elas entrarem numa referência
+que recebe a classe pai, a abstração.
+
+Pra você programar desse jeito, você tem que pensar nessas coisas. Isso não é lá tão trivial.
+É bem complicado, na verdade.
+
+É até por isso que muita gente fala “Olha, em vez de usar herança, favoreça a composição.
+Faça sua classe depender de outra classe, faça sua outra classe depender, talvez, dessa mesma classe, mas fuja de reaproveitar código por herança”.

@@ -1,4 +1,4 @@
-package acoplamento.good;
+package interfaceSegregationPrinciple_acoplamento.good;
 
 public class EnviadorDeEmail implements AcaoAposGerarNota {
     public void enviaEmail(NotaFiscal nf) {

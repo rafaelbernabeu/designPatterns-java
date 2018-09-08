@@ -1,4 +1,4 @@
-package acoplamento.good;
+package interfaceSegregationPrinciple_acoplamento.good;
 
 public class NotaFiscalDao implements AcaoAposGerarNota {
     public void persiste(NotaFiscal nf) {
