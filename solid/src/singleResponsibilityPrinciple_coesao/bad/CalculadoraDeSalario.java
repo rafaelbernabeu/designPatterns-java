@@ -1,8 +1,8 @@
-package singleResponsibilityPrinciple.bad;
+package singleResponsibilityPrinciple_coesao.bad;
 
-import static singleResponsibilityPrinciple.bad.Cargo.DBA;
-import static singleResponsibilityPrinciple.bad.Cargo.DESENVOLVEDOR;
-import static singleResponsibilityPrinciple.bad.Cargo.TESTER;
+import static singleResponsibilityPrinciple_coesao.bad.Cargo.DBA;
+import static singleResponsibilityPrinciple_coesao.bad.Cargo.DESENVOLVEDOR;
+import static singleResponsibilityPrinciple_coesao.bad.Cargo.TESTER;
 
 public class CalculadoraDeSalario {
 

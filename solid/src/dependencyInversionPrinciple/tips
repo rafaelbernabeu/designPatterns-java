@@ -1,0 +1,7 @@
+A ideia é: sempre que você for depender, depende de alguém mais estável. Então, A depende de B, a ideia é que B seja mais estável que A. Mas B depende de C. Então, a ideia e que C seja mais estável que B. A ideia é que você sempre passe a depender de modos mais estáveis que você.
+
+E mais do que isso, esse princípio vai mais longe. Ele fala o seguinte: “Olha, se você está numa classe, tenta depender de abstração. Você não pode depender de implementação. Dependa sempre de abstrações.”
+
+Se você está numa abstração, a ideia é de que a abstração não conheça a implementação. Consegue ver o caminho? Dependa sempre de abstração, porque abstração é estável. Nunca dependa de implementação.
+
+E a abstração, por sua vez, ela só pode conhecer outras abstrações. A ideia é que ela não conheça detalhes de implementação. Isso é o que nós chamamos de Dependency Inversion Principle, o Princípio de Inversão de Dependência.

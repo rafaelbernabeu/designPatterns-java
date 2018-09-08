@@ -1,0 +1,12 @@
+Se a minha classe depende de List, isso não é um problema porque List não muda.
+Se ela não muda, eu não vou sofrer impacto com a mudança dela.
+Esse é o ponto. Eu quero me acoplar com classes, interfaces, módulos, que sejam estáveis.
+Que tendem a mudar muito pouco.
+
+
+Agora, basta eu, na hora de instanciar o GeradorDeNotaFiscal, passar todas as ações que eu quero, certo?
+new NotaFiscalDao, new EnviadorDeEmail, e assim por diante.
+
+Eu resolvi o problema de acoplamento agora do GeradorDeNotaFiscal usando interfaces e,
+mais do que isso, dependendo de um módulo estável que eu criei, que é o AcaoAposGerarNota.
+

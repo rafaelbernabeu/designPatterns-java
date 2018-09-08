@@ -1,0 +1,3 @@
+A primeira coisa que eu vou fazer é criar uma interface que vai representar uma abstração pra mim.
+
+Viu o que a gente fez? Eu criei uma abstração, que eu chamei de TabelaDePreco, outra de ServicoDeEntrega, fiz a minha classe CalculadoraDePrecos depender dessas interfaces, e veja bem, essas interfaces são estáveis, elas tendem a mudar muito pouco. Está tudo beleza com o acoplamento, e veja que agora minha classe é aberta! Porque eu consigo mudar o comportamento dela. Então, dependendo da TabelaDePreco que eu passar, a minha calculadora vai funcionar de uma maneira diferente. Dependendo da empresa de frete que eu passar, a minha calculadora vai funcionar também de uma maneira diferente.

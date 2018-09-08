@@ -1,4 +1,4 @@
-package singleResponsibilityPrinciple.bad;
+package singleResponsibilityPrinciple_coesao.bad;
 
 import java.util.Calendar;
 
